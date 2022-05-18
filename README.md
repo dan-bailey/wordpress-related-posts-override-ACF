@@ -3,3 +3,5 @@ Allows a user to add new "related posts" to an individual post and override the 
 
 # remaining to-do items
 I should probably write some code to ensure that none of the user-selected posts are already in the array, and if they are, then I'll need to excise them, and do so in a way that respects the four-post limit.
+
+Also, I should tighten-up the piece that santizes the length of the card summaries.  That would be useful.
