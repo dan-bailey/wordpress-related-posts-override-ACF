@@ -1,0 +1,118 @@
+[
+    {
+        "key": "group_6275d9f5de486",
+        "title": "Related Posts Override",
+        "fields": [
+            {
+                "key": "field_6275da07b35ba",
+                "label": "Related Articles Mode",
+                "name": "related_articles_mode",
+                "type": "select",
+                "instructions": "Select mode.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "automatic": "Automatic",
+                    "manual": "Manual"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "wpml_cf_preferences": 1,
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_6275dabfb35bb",
+                "label": "Select Related Articles",
+                "name": "select_related_articles",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6275da07b35ba",
+                            "operator": "==",
+                            "value": "manual"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "acfe_repeater_stylised_button": 0,
+                "collapsed": "",
+                "min": 1,
+                "max": 4,
+                "layout": "table",
+                "button_label": "",
+                "wpml_cf_preferences": 1,
+                "sub_fields": [
+                    {
+                        "key": "field_6275db4ab35bc",
+                        "label": "Post",
+                        "name": "post_identity",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "post"
+                        ],
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "object",
+                        "wpml_cf_preferences": 1,
+                        "save_custom": 0,
+                        "save_post_status": "publish",
+                        "acfe_bidirectional": {
+                            "acfe_bidirectional_enabled": "0"
+                        },
+                        "ui": 1
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "left",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "acfe_display_title": "",
+        "acfe_autosync": [
+            "json"
+        ],
+        "acfe_form": 0,
+        "acfe_meta": "",
+        "acfe_note": ""
+    }
+]
